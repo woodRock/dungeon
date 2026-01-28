@@ -1,24 +1,58 @@
-[gd_scene load_steps=4 format=3 uid="uid://udlqko0vrbu1"]
+[gd_scene load_steps=11 format=3 uid="uid://udlqko0vrbu1"]
 
+[ext_resource type="PackedScene" uid="uid://btm168c32ma7s" path="res://kill_plane.tscn" id="1_1bvp3"]
 [ext_resource type="MeshLibrary" uid="uid://bafieyfdcg66m" path="res://dungeon_library.tres" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://kmkpela254dc" path="res://player.tscn" id="3_h2yge"]
 [ext_resource type="Script" uid="uid://co5jx1ncxs4hu" path="res://camera_3d.gd" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://dl34p3s2v4bqr" path="res://moving_platform.tscn" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://bqinuadpsyky3" path="res://interactable_crate.tscn" id="6_272bh"]
+[ext_resource type="PackedScene" uid="uid://chry1pccuvjwq" path="res://falling_platform.tscn" id="7_272bh"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_lquwl"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_7mycd"]
+sky_material = SubResource("ProceduralSkyMaterial_lquwl")
+
+[sub_resource type="Environment" id="Environment_272bh"]
+background_mode = 2
+sky = SubResource("Sky_7mycd")
+tonemap_mode = 2
+glow_enabled = true
 
 [node name="Main" type="Node3D"]
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_272bh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="KillPlane" parent="." instance=ExtResource("1_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
+
 [node name="Player" parent="." instance=ExtResource("3_h2yge")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1904774, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.89701164, 1.1904774, 2.023624)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.9396926, 0.34202012, 0, -0.34202012, 0.9396926, 0, 4, 6)
 script = ExtResource("4_1bvp3")
-player_path = NodePath("../Player/CharacterBody3D")
+player_path = NodePath("../Player")
 
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource("3_1bvp3")
 data = {
-"cells": PackedInt32Array(-1, 0, 1, -1, 65534, 1, -1, 65532, 1, -2, 0, 1441792, -2, 65534, 1441792, -2, 65532, 1441792, -65536, 0, 1441792, -65536, 65534, 1441792, -65536, 65532, 1441792)
+"cells": PackedInt32Array(-1, 0, 1, -1, 65534, 1, -1, 65532, 1, -2, 0, 1441792, -2, 65534, 1441792, -2, 65532, 1441792, -65536, 0, 1441792, -65536, 65534, 1441792, -65536, 65532, 1441792, -1, 65520, 1441793, -1, 65518, 1441793, -1, 65516, 1441793, -1, 65528, 1441793)
 }
 metadata/_editor_floor_ = Vector3(0, -1, 0)
 
-[editable path="Player"]
+[node name="InteractableCrate" parent="." instance=ExtResource("6_272bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1152538, -1.36269, -7.2719345)
+
+[node name="MovingPlatform" parent="." instance=ExtResource("6_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5898457, -1, -21.55987)
+
+[node name="FallingPlatform" parent="." instance=ExtResource("7_272bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, -43)

@@ -15,7 +15,6 @@ func _ready() -> void:
 			
 func _process(_delta: float) -> void:
 	if target:
-		print("Target position: ", target.global_position) # Does this show up in the Output?
 		# 1. Update positions
 		global_position.z = target.global_position.z + 6 
 		global_position.x = lerp(global_position.x, target.global_position.x, 0.1)

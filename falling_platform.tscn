@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://chry1pccuvjwq"]
+
+[ext_resource type="Script" uid="uid://cqihhtqhj6qpt" path="res://falling_platform.gd" id="1_iq02c"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3bb5w"]
+size = Vector3(4, 0.1, 4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5yqql"]
+size = Vector3(4, 0.1, 4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iq02c"]
+size = Vector3(4.2, 0.2, 4.2)
+
+[node name="FallingPlatform" type="AnimatableBody3D"]
+script = ExtResource("1_iq02c")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_3bb5w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_5yqql")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_iq02c")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true

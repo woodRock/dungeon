@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqinuadpsyky3"]
+
+[ext_resource type="PackedScene" uid="uid://qse7tu03omt0" path="res://assets/barrel_large.gltf" id="1_q7a31"]
+[ext_resource type="Script" uid="uid://b1hmxc8hqs155" path="res://interactable_crate.gd" id="1_xl2hc"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_q7a31"]
+radius = 1.0
+
+[node name="InteractableCrate" type="StaticBody3D"]
+collision_layer = 2
+script = ExtResource("1_xl2hc")
+
+[node name="barrel_large2" parent="." instance=ExtResource("1_q7a31")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_q7a31")

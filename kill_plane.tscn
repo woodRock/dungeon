@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://btm168c32ma7s"]
+
+[ext_resource type="Script" uid="uid://dhrugiixkn1wq" path="res://kill_plane.gd" id="1_nj6os"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_s717a"]
+
+[node name="KillPlane" type="Area3D"]
+script = ExtResource("1_nj6os")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("WorldBoundaryShape3D_s717a")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
