@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://p1kg6q41t6sr"]
 
-[ext_resource type="Script" uid="uid://de4fc2lu80lhg" path="res://hud.gd" id="1_4d6w6"]
+[ext_resource type="Script" uid="uid://de4fc2lu80lhg" path="res://ui/hud/hud.gd" id="1_4d6w6"]
 [ext_resource type="Texture2D" uid="uid://cjq7rl31tqrt4" path="res://assets/textures/wumpa_fruit.png" id="2_e0nub"]
 
 [node name="HUD" type="CanvasLayer"]

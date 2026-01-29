@@ -19,8 +19,13 @@ extends CharacterBody3D
 # --- Variables ---
 var is_spinning: bool = false
 var coyote_timer: float = 0.0
+var is_dead = false 
 
 func _physics_process(delta: float) -> void:
+	# IF DEAD: Stop all logic and don't process movement/animations
+	if is_dead:
+		return
+		
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
@@ -95,7 +100,21 @@ func start_spin() -> void:
 func stop_spin() -> void:
 	is_spinning = false 
 	spin_area.monitoring = false
-
+	
+func die() -> void: 
+	
+	# Can only die once.
+	if is_dead: 
+		return
+	# The player is dead.
+	is_dead = true
+	
+	# Stop all movement.
+	velocity = Vector3.ZERO
+	
+	# Play the death animation.
+	_play_animation("General/Death_A")
+	 
 func _play_animation(anim_name: String) -> void:
 	if not anim_player or not anim_player.has_animation(anim_name):
 		return
