@@ -1,4 +1,4 @@
-[gd_resource type="MeshLibrary" load_steps=40 format=4 uid="uid://bafieyfdcg66m"]
+[gd_resource type="MeshLibrary" format=4 uid="uid://bafieyfdcg66m"]
 
 [ext_resource type="Texture2D" uid="uid://c0f5c3giu43kd" path="res://assets/textures/dungeon_texture.png" id="1_fadje"]
 
