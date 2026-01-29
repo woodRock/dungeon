@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://c6qqtii2hvuly"]
+
+[ext_resource type="Texture2D" uid="uid://bhfdwjfnnyufn" path="res://assets/textures/conveyor_texture.png" id="1_hg3jf"]
+[ext_resource type="Script" uid="uid://cthumnq0y372j" path="res://objects/platforms/conveyor_platform.gd" id="1_s6tak"]
+
+[sub_resource type="Shader" id="Shader_s6tak"]
+code = "shader_type spatial;
+
+uniform float scroll_speed = 1.0;
+uniform vec2 scroll_direction = vec2(0.0, 1.0); // New: Control which way it slides
+uniform vec2 tex_scale = vec2(1.0, 1.0);
+uniform sampler2D belt_texture : source_color, repeat_enable;
+
+void fragment() {
+    // Multiply speed by direction and time
+    vec2 offset = scroll_direction * scroll_speed * TIME;
+    vec2 shifted_uv = (UV * tex_scale) + offset;
+    
+    ALBEDO = texture(belt_texture, shifted_uv).rgb;
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hg3jf"]
+resource_local_to_scene = true
+render_priority = 0
+shader = SubResource("Shader_s6tak")
+shader_parameter/scroll_speed = 4.0
+shader_parameter/scroll_direction = Vector2(0, 1)
+shader_parameter/tex_scale = Vector2(1, 1)
+shader_parameter/belt_texture = ExtResource("1_hg3jf")
+
+[sub_resource type="BoxMesh" id="BoxMesh_0udd1"]
+size = Vector3(4, 0.1, 4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b1yn3"]
+size = Vector3(4, 0.1, 4)
+
+[node name="ConveyorPlatform" type="StaticBody3D"]
+constant_linear_velocity = Vector3(0, 0, 4)
+script = ExtResource("1_s6tak")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("ShaderMaterial_hg3jf")
+mesh = SubResource("BoxMesh_0udd1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_b1yn3")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]

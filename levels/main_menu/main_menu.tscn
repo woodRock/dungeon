@@ -35,6 +35,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Dungeon"
+horizontal_alignment = 1
 
 [node name="LevelNameLabel" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2

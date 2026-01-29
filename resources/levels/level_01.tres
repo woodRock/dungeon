@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_fq8ci")
-level_name = "Tutorial"
+level_name = "Plummeting Peaks"
 level_scene = ExtResource("1_id541")
 fruit_goal = 3
 metadata/_custom_type_script = "uid://x66ganyip2xv"

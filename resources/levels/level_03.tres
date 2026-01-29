@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=3 format=3 uid="uid://brphsrxx4vwyx"]
+
+[ext_resource type="Script" uid="uid://x66ganyip2xv" path="res://scripts/resources/level_data.gd" id="1_au1ki"]
+[ext_resource type="PackedScene" uid="uid://2vq58qwe2ax3" path="res://levels/levels/level_03.tscn" id="1_eetxv"]
+
+[resource]
+script = ExtResource("1_au1ki")
+level_name = "Treadmill Trouble"
+level_scene = ExtResource("1_eetxv")
+metadata/_custom_type_script = "uid://x66ganyip2xv"

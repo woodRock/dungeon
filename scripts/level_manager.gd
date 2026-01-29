@@ -3,7 +3,8 @@ extends Node
 # Drag your .tres resource files into this array in the Inspector
 @export var levels: Array[LevelData] = [
 	preload("res://resources/levels/level_01.tres"),
-	preload("res://resources/levels/level_02.tres")
+	preload("res://resources/levels/level_02.tres"),
+	preload("res://resources/levels/level_03.tres")
 ]
 
 var current_level_index: int = 0

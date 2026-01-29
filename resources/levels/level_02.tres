@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("1_q126n")
-level_name = "Beginner's Folly"
+level_name = "Pointy Pavement"
 level_scene = ExtResource("1_3hqt0")
 metadata/_custom_type_script = "uid://x66ganyip2xv"
