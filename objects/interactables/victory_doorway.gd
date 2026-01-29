@@ -31,7 +31,7 @@ func _win_sequence():
 	if victory_ui:
 		# Pass in the player's fruit count (if you have one)
 		# For now, we'll just send 0
-		victory_ui.show_ui(0) 
+		victory_ui.show_ui(0)
 		
 	# Pause the rest of the game logic if needed
-	# get_tree().paused = true
+	#get_tree().paused = true

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dl34p3s2v4bqr"]
 
-[ext_resource type="Script" uid="uid://doqauv1xiwlvf" path="res://moving_platform.gd" id="1_q06lf"]
+[ext_resource type="Script" uid="uid://doqauv1xiwlvf" path="res://objects/platforms/moving_platform.gd" id="1_q06lf"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_hrpga"]
 size = Vector3(4, 0.1, 4)

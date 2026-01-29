@@ -1,14 +1,14 @@
 [gd_scene load_steps=13 format=3 uid="uid://udlqko0vrbu1"]
 
-[ext_resource type="PackedScene" uid="uid://btm168c32ma7s" path="res://kill_plane.tscn" id="1_1bvp3"]
-[ext_resource type="MeshLibrary" uid="uid://bafieyfdcg66m" path="res://dungeon_library.tres" id="3_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://kmkpela254dc" path="res://player.tscn" id="3_h2yge"]
-[ext_resource type="Script" uid="uid://co5jx1ncxs4hu" path="res://camera_3d.gd" id="4_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://dl34p3s2v4bqr" path="res://moving_platform.tscn" id="6_7mycd"]
-[ext_resource type="PackedScene" uid="uid://bqinuadpsyky3" path="res://interactable_crate.tscn" id="6_272bh"]
-[ext_resource type="PackedScene" uid="uid://chry1pccuvjwq" path="res://falling_platform.tscn" id="7_272bh"]
-[ext_resource type="PackedScene" uid="uid://dq2004cbvgdkq" path="res://victory_doorway.tscn" id="8_5vw27"]
-[ext_resource type="PackedScene" uid="uid://e6r4e75dvisv" path="res://victory_ui.tscn" id="9_kek77"]
+[ext_resource type="PackedScene" uid="uid://btm168c32ma7s" path="res://objects/hazards/kill_plane.tscn" id="1_1bvp3"]
+[ext_resource type="MeshLibrary" uid="uid://bafieyfdcg66m" path="res://resources/dungeon_library.tres" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://kmkpela254dc" path="res://objects/player/player.tscn" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://co5jx1ncxs4hu" path="res://objects/player/camera_3d.gd" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://dl34p3s2v4bqr" path="res://objects/platforms/moving_platform.tscn" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://bqinuadpsyky3" path="res://objects/interactables/interactable_crate.tscn" id="6_272bh"]
+[ext_resource type="PackedScene" uid="uid://chry1pccuvjwq" path="res://objects/platforms/falling_platform.tscn" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://dq2004cbvgdkq" path="res://objects/interactables/victory_doorway.tscn" id="8_5vw27"]
+[ext_resource type="PackedScene" uid="uid://e6r4e75dvisv" path="res://ui/victory_ui.tscn" id="9_kek77"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_lquwl"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
