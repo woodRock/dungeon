@@ -1,0 +1,50 @@
+[gd_scene load_steps=10 format=3 uid="uid://d02400b0inf4i"]
+
+[ext_resource type="PackedScene" uid="uid://btm168c32ma7s" path="res://objects/hazards/kill_plane.tscn" id="1_g7rdq"]
+[ext_resource type="PackedScene" uid="uid://kmkpela254dc" path="res://objects/player/player.tscn" id="2_orkq7"]
+[ext_resource type="Script" uid="uid://co5jx1ncxs4hu" path="res://objects/player/camera_3d.gd" id="3_nv1vy"]
+[ext_resource type="PackedScene" uid="uid://dq2004cbvgdkq" path="res://objects/interactables/victory_doorway.tscn" id="4_bw48l"]
+[ext_resource type="PackedScene" uid="uid://e6r4e75dvisv" path="res://ui/victory_ui/victory_ui.tscn" id="5_hqdw0"]
+[ext_resource type="PackedScene" uid="uid://p1kg6q41t6sr" path="res://ui/hud/hud.tscn" id="5_orkq7"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_esfau"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_7mycd"]
+sky_material = SubResource("ProceduralSkyMaterial_esfau")
+
+[sub_resource type="Environment" id="Environment_xqs1o"]
+background_mode = 2
+sky = SubResource("Sky_7mycd")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="LevelBase" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xqs1o")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="KillPlane" parent="." instance=ExtResource("1_g7rdq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
+
+[node name="Player" parent="." instance=ExtResource("2_orkq7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.89701164, 1.1904774, 2.023624)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9396926, 0.34202012, 0, -0.34202012, 0.9396926, 0, 4, 6)
+script = ExtResource("3_nv1vy")
+player_path = NodePath("../Player")
+
+[node name="VictoryDoorway" parent="." instance=ExtResource("4_bw48l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0208874, -0.95000005, -104.98987)
+
+[node name="HUD" parent="." instance=ExtResource("5_orkq7")]
+
+[node name="VictoryUI" parent="." instance=ExtResource("5_hqdw0")]
+
+[node name="World" type="Node3D" parent="."]

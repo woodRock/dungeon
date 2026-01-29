@@ -27,11 +27,12 @@ func open_door() -> void:
 func _win_sequence():
 	# Find the UI in the scene
 	var victory_ui = get_tree().root.find_child("VictoryUI", true, false)
-	
+	var fruit_count = GameManager.current_fruits
+
 	if victory_ui:
 		# Pass in the player's fruit count (if you have one)
 		# For now, we'll just send 0
-		victory_ui.show_ui(0)
+		victory_ui.show_ui(fruit_count)
 		
 	# Pause the rest of the game logic if needed
 	#get_tree().paused = true

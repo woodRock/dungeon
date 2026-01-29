@@ -2,16 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://37yen0fa1cbf"
-path="res://.godot/imported/icon.png-011290bc998947911993f97fea484050.ctex"
-metadata={
-"vram_texture": false
-}
+uid="uid://bk51ge7ab5pfo"
+valid=false
 
 [deps]
 
 source_file="res://assets/branding/icon.png"
-dest_files=["res://.godot/imported/icon.png-011290bc998947911993f97fea484050.ctex"]
 
 [params]
 

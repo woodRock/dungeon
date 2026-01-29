@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://0ligdivdxs7h"]
+[gd_scene load_steps=2 format=3 uid="uid://0ligdivdxs7h"]
 
 [ext_resource type="Script" uid="uid://d38fvg5cnfi3y" path="res://levels/main_menu/main_menu.gd" id="1_u4e7g"]
-[ext_resource type="PackedScene" uid="uid://udlqko0vrbu1" path="res://levels/level_1/level_01.tscn" id="2_qbtdg"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -11,7 +10,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_u4e7g")
-first_level = ExtResource("2_qbtdg")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -37,6 +35,9 @@ layout_mode = 2
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Dungeon"
+
+[node name="LevelNameLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
 
 [node name="PlayButton" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2

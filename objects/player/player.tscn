@@ -1,8 +1,8 @@
 [gd_scene load_steps=29 format=4 uid="uid://kmkpela254dc"]
 
 [ext_resource type="Script" uid="uid://dkidmkhidrfts" path="res://objects/player/player.gd" id="1_4flbx"]
-[ext_resource type="Texture2D" uid="uid://bigk5r6qtn4a5" path="res://assets/adventurers/Characters/gltf/Knight_knight_texture.png" id="2_onrkg"]
-[ext_resource type="AnimationLibrary" uid="uid://c511twlv1y11q" path="res://assets/adventurers/Animations/gltf/Rig_Medium/Rig_Medium_General.glb" id="4_hqtel"]
+[ext_resource type="Texture2D" uid="uid://bigk5r6qtn4a5" path="res://assets/models/adventurers/Characters/gltf/Knight_knight_texture.png" id="2_onrkg"]
+[ext_resource type="AnimationLibrary" uid="uid://c511twlv1y11q" path="res://assets/models/adventurers/Animations/gltf/Rig_Medium/Rig_Medium_General.glb" id="4_hqtel"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uyvsq"]
 resource_name = "knight"

@@ -14,4 +14,4 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node3D) -> void:
 	if body is CharacterBody3D:
 		print("Crash fell in a pit!")
-		get_tree().reload_current_scene()
+		LevelManager.restart_level()

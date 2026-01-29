@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=3 format=3 uid="uid://bsbmagl8q6lp6"]
+
+[ext_resource type="PackedScene" uid="uid://cqeaikcaock5a" path="res://levels/levels/level_02.tscn" id="1_3hqt0"]
+[ext_resource type="Script" uid="uid://x66ganyip2xv" path="res://scripts/resources/level_data.gd" id="1_q126n"]
+
+[resource]
+script = ExtResource("1_q126n")
+level_name = "Beginner's Folly"
+level_scene = ExtResource("1_3hqt0")
+metadata/_custom_type_script = "uid://x66ganyip2xv"

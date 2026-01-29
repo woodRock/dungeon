@@ -1,7 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqinuadpsyky3"]
+[gd_scene load_steps=7 format=3 uid="uid://bqinuadpsyky3"]
 
-[ext_resource type="PackedScene" uid="uid://qse7tu03omt0" path="res://assets/barrel_large.gltf" id="1_q7a31"]
+[ext_resource type="PackedScene" uid="uid://qse7tu03omt0" path="res://assets/models/barrel_large.gltf" id="1_q7a31"]
 [ext_resource type="Script" uid="uid://b1hmxc8hqs155" path="res://objects/interactables/interactable_crate.gd" id="1_xl2hc"]
+[ext_resource type="PackedScene" uid="uid://du61vkjglsj5h" path="res://objects/fruit/fruit.tscn" id="2_l0ybc"]
+[ext_resource type="Texture2D" uid="uid://c0f5c3giu43kd" path="res://assets/textures/dungeon_texture.png" id="3_tf10b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l0ybc"]
+albedo_texture = ExtResource("3_tf10b")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_q7a31"]
 radius = 1.0
@@ -9,9 +14,15 @@ radius = 1.0
 [node name="InteractableCrate" type="StaticBody3D"]
 collision_layer = 2
 script = ExtResource("1_xl2hc")
+fruit_scene = ExtResource("2_l0ybc")
 
 [node name="barrel_large2" parent="." instance=ExtResource("1_q7a31")]
+
+[node name="barrel_large" parent="barrel_large2" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_l0ybc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_q7a31")
+
+[editable path="barrel_large2"]

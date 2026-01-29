@@ -15,6 +15,11 @@ run/main_scene="uid://0ligdivdxs7h"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="uid://37yen0fa1cbf"
 
+[autoload]
+
+GameManager="*res://scripts/game_manager.gd"
+LevelManager="*res://scripts/level_manager.gd"
+
 [input]
 
 spin={
