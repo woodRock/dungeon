@@ -16,9 +16,7 @@ func squash():
 	await tween.finished
 	_break_barrel()
 
-func _break_barrel():
-	print("Barrel Breaking!")
-	
+func _break_barrel():	
 	# 1. Disable the Barrel's visual and physical presence immediately
 	# Adjust these names to match your actual child node names (e.g., $Mesh, $Collision)
 	if has_node("MeshInstance3D"): $MeshInstance3D.hide()
@@ -26,7 +24,6 @@ func _break_barrel():
 	
 	# 2. Spawn the fruits
 	if fruit_scene:
-		print("Spawning ", fruit_count, " fruits")
 		for i in range(fruit_count):
 			spawn_fruit()
 	
@@ -52,8 +49,6 @@ func spawn_fruit() -> void:
 		randf_range(-spawn_radius, spawn_radius)
 	)
 	
-	print("Target_position: ", target_position)
-
 	var tween = create_tween()
 	
 	# --- The Outward Burst (Parallel) ---

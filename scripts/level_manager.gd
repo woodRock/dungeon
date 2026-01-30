@@ -22,8 +22,7 @@ func load_next_level():
 		get_tree().change_scene_to_packed(next_level.level_scene)
 	else:
 		# No more levels? Send them to the credits or main menu
-		print("Game Complete!")
-		get_tree().change_scene_to_file("res://scenes/menus/main_menu.tscn")
+		get_tree().change_scene_to_file("res://levels/main_menu/main_menu.tscn")
 
 func restart_level():
 	GameManager.reset_fruits()

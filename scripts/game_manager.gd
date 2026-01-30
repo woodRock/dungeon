@@ -9,7 +9,6 @@ func add_fruit(amount: int) -> void:
 	current_fruits += amount 
 	# Emit the signal whenever the value changes. 
 	fruit_count_changed.emit(current_fruits)
-	print("Total fruits: ", current_fruits)
 	
 func reset_fruits() -> void: 
 	current_fruits = 0
