@@ -51,9 +51,3 @@ func _on_timer_timeout():
 func _on_area_3d_body_entered(body):
 	if body is CharacterBody3D and not body.is_dead:
 		body.die()
-		
-		var anim_player: AnimationPlayer = body.get_node("ModelContainer/Knight/AnimationPlayer")
-		var death_length: float = anim_player.get_animation("General/Death_A").length
-		
-		await get_tree().create_timer(death_length).timeout
-		LevelManager.restart_level()

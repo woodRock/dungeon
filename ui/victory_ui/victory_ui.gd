@@ -6,7 +6,7 @@ extends CanvasLayer
 @onready var stats_label = $ColorRect/CenterContainer/VBoxContainer/StatsLabel
 
 # --- Configuration ---
-@export var menu_scene_path: String = "res://levels/main_menu/main_menu.tscn"
+@export var menu_scene_path: String = "res://ui/menus/main_menu.tscn"
 
 func _ready():
 	self.hide()
@@ -36,10 +36,7 @@ func _on_next_level_button_pressed() -> void:
 	LevelManager.load_next_level()
 
 func _on_main_menu_button_pressed() -> void:
-	if FileAccess.file_exists(menu_scene_path):
-		get_tree().change_scene_to_file(menu_scene_path)
-	else:
-		get_tree().reload_current_scene()
+	get_tree().change_scene_to_file(menu_scene_path)
 
 func _on_restart_button_pressed() -> void:
-	get_tree().reload_current_scene()
+	LevelManager.restart_level()

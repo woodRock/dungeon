@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cqeaikcaock5a"]
+[gd_scene format=3 uid="uid://cqeaikcaock5a"]
 
-[ext_resource type="PackedScene" uid="uid://d02400b0inf4i" path="res://levels/levels/level_base.tscn" id="1_1pj81"]
+[ext_resource type="PackedScene" uid="uid://d02400b0inf4i" path="res://levels/level_base.tscn" id="1_1pj81"]
 [ext_resource type="MeshLibrary" uid="uid://bafieyfdcg66m" path="res://resources/dungeon_library.tres" id="2_7pd5o"]
 [ext_resource type="PackedScene" uid="uid://dd6stb1eb7lvn" path="res://objects/hazards/spikes.tscn" id="3_4sp3u"]
 [ext_resource type="PackedScene" uid="uid://chry1pccuvjwq" path="res://objects/platforms/falling_platform.tscn" id="4_ayju3"]

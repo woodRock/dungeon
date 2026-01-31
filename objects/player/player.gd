@@ -102,10 +102,10 @@ func stop_spin() -> void:
 	spin_area.monitoring = false
 	
 func die() -> void: 
-	
 	# Can only die once.
 	if is_dead: 
 		return
+		
 	# The player is dead.
 	is_dead = true
 	
@@ -114,6 +114,13 @@ func die() -> void:
 	
 	# Play the death animation.
 	_play_animation("General/Death_A")
+	
+	# Wait for death animation to finish.
+	var death_length = anim_player.get_animation("General/Death_A").length
+	await get_tree().create_timer(death_length).timeout
+	
+	# Restart the level.
+	LevelManager.restart_level()
 	 
 func _play_animation(anim_name: String) -> void:
 	if not anim_player or not anim_player.has_animation(anim_name):

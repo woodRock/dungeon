@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dm5kqn5rrmicm"]
+
+[ext_resource type="Script" uid="uid://d2pk45hoiasnf" path="res://ui/menus/pause_menu.gd" id="1_hv7dm"]
+
+[node name="PauseMenu" type="Control" unique_id=1844740402]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hv7dm")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=398951131]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.39215687)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=915347138]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -29.5
+offset_right = 56.0
+offset_bottom = 29.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1589264716]
+layout_mode = 2
+text = "GAME PAUSED"
+
+[node name="ResumeButton" type="Button" parent="VBoxContainer" unique_id=1911729334]
+layout_mode = 2
+text = "Resume"
+
+[node name="RestartButton" type="Button" parent="VBoxContainer" unique_id=417266162]
+layout_mode = 2
+text = "Restart"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=634786281]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
