@@ -18,9 +18,17 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		open_door() 
 		
 func open_door() -> void: 
+	# The door is open
 	is_open = true 
+	
+	# Animate the door opening (i.e., rotate the y-axis 90 degrees).
 	var tween: Tween = create_tween() 
 	tween.tween_property(door, "rotation:y", deg_to_rad(open_angle), open_speed).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+	
+	# Wait for the door to open.
+	await get_tree().create_timer(open_speed).timeout
+	
+	# Play the win sequence.
 	_win_sequence()
 
 # Inside your doorway script (Area3D)

@@ -5,57 +5,57 @@
 [ext_resource type="PackedScene" uid="uid://dd6stb1eb7lvn" path="res://objects/hazards/spikes.tscn" id="3_4sp3u"]
 [ext_resource type="PackedScene" uid="uid://chry1pccuvjwq" path="res://objects/platforms/falling_platform.tscn" id="4_ayju3"]
 
-[node name="LevelBase" instance=ExtResource("1_1pj81")]
+[node name="LevelBase" unique_id=1062844738 instance=ExtResource("1_1pj81")]
 
-[node name="VictoryDoorway" parent="." index="5"]
+[node name="VictoryDoorway" parent="." index="5" unique_id=1006406996]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9791126, -0.95000005, -81.98987)
 
-[node name="GridMap" type="GridMap" parent="World" index="0"]
+[node name="GridMap" type="GridMap" parent="World" parent_id_path=PackedInt32Array(267138266) index="0" unique_id=1950042611]
 mesh_library = ExtResource("2_7pd5o")
 data = {
 "cells": PackedInt32Array(-1, 0, 1, -1, 65534, 1, -1, 65532, 1, -2, 0, 1441792, -2, 65534, 1441792, -2, 65532, 1441792, -65536, 0, 1441792, -65536, 65534, 1441792, -65536, 65532, 1441792, -1, 65530, 1441793, -1, 65526, 1441793, -1, 65524, 1441793, -1, 65510, 1441793, -1, 65508, 1441793, -1, 65496, 1441793, -1, 65494, 1441793)
 }
 metadata/_editor_floor_ = Vector3(0, -1, 0)
 
-[node name="Spikes" parent="World" index="1" instance=ExtResource("3_4sp3u")]
+[node name="Spikes" parent="World" parent_id_path=PackedInt32Array(267138266) index="1" unique_id=426349214 instance=ExtResource("3_4sp3u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, -15)
 
-[node name="Spikes2" parent="World" index="2" instance=ExtResource("3_4sp3u")]
+[node name="Spikes2" parent="World" parent_id_path=PackedInt32Array(267138266) index="2" unique_id=242978127 instance=ExtResource("3_4sp3u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, -27)
 initial_delay = 1.0
 
-[node name="Spikes3" parent="World" index="3" instance=ExtResource("3_4sp3u")]
+[node name="Spikes3" parent="World" parent_id_path=PackedInt32Array(267138266) index="3" unique_id=1045806105 instance=ExtResource("3_4sp3u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, -31)
 initial_delay = 2.0
 
-[node name="Spikes4" parent="World" index="4" instance=ExtResource("3_4sp3u")]
+[node name="Spikes4" parent="World" parent_id_path=PackedInt32Array(267138266) index="4" unique_id=425504143 instance=ExtResource("3_4sp3u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, -35)
 initial_delay = 3.0
 
-[node name="FallingPlatform" parent="World" index="5" instance=ExtResource("4_ayju3")]
+[node name="FallingPlatform" parent="World" parent_id_path=PackedInt32Array(267138266) index="5" unique_id=392564498 instance=ExtResource("4_ayju3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9885526, -1, -38.943237)
 
-[node name="FallingPlatform2" parent="World" index="6" instance=ExtResource("4_ayju3")]
+[node name="FallingPlatform2" parent="World" parent_id_path=PackedInt32Array(267138266) index="6" unique_id=293340676 instance=ExtResource("4_ayju3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9885526, -1, -42.943237)
 
-[node name="Spikes5" parent="World" index="7" instance=ExtResource("3_4sp3u")]
+[node name="Spikes5" parent="World" parent_id_path=PackedInt32Array(267138266) index="7" unique_id=104311460 instance=ExtResource("3_4sp3u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, -47)
 initial_delay = 4.0
 
-[node name="Spikes6" parent="World" index="8" instance=ExtResource("3_4sp3u")]
+[node name="Spikes6" parent="World" parent_id_path=PackedInt32Array(267138266) index="8" unique_id=2110919982 instance=ExtResource("3_4sp3u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, -59)
 initial_delay = 5.0
 
-[node name="FallingPlatform3" parent="World" index="9" instance=ExtResource("4_ayju3")]
+[node name="FallingPlatform3" parent="World" parent_id_path=PackedInt32Array(267138266) index="9" unique_id=1153793694 instance=ExtResource("4_ayju3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, -63)
 
-[node name="Spikes7" parent="World" index="10" instance=ExtResource("3_4sp3u")]
+[node name="Spikes7" parent="World" parent_id_path=PackedInt32Array(267138266) index="10" unique_id=244191698 instance=ExtResource("3_4sp3u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, -67)
 initial_delay = 6.0
 
-[node name="FallingPlatform4" parent="World" index="11" instance=ExtResource("4_ayju3")]
+[node name="FallingPlatform4" parent="World" parent_id_path=PackedInt32Array(267138266) index="11" unique_id=401814012 instance=ExtResource("4_ayju3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, -71)
 
-[node name="Spikes8" parent="World" index="12" instance=ExtResource("3_4sp3u")]
+[node name="Spikes8" parent="World" parent_id_path=PackedInt32Array(267138266) index="12" unique_id=1738084513 instance=ExtResource("3_4sp3u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, -75)
 initial_delay = 7.0

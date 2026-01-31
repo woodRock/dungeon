@@ -6,45 +6,45 @@
 [ext_resource type="PackedScene" uid="uid://bqinuadpsyky3" path="res://objects/interactables/interactable_crate.tscn" id="6_272bh"]
 [ext_resource type="PackedScene" uid="uid://chry1pccuvjwq" path="res://objects/platforms/falling_platform.tscn" id="7_272bh"]
 
-[node name="LevelBase" instance=ExtResource("1_8bfof")]
+[node name="LevelBase" unique_id=2069363945 instance=ExtResource("1_8bfof")]
 
-[node name="GridMap" type="GridMap" parent="World" index="0"]
+[node name="GridMap" type="GridMap" parent="World" parent_id_path=PackedInt32Array(267138266) index="0" unique_id=1898387044]
 mesh_library = ExtResource("3_1bvp3")
 data = {
-"cells": PackedInt32Array(-1, 0, 1, -1, 65534, 1, -1, 65532, 1, -2, 0, 1441792, -2, 65534, 1441792, -2, 65532, 1441792, -65536, 0, 1441792, -65536, 65534, 1441792, -65536, 65532, 1441792, -1, 65520, 1441793, -1, 65518, 1441793, -1, 65516, 1441793, -1, 65528, 1441793, -1, 65506, 655361, -1, 65504, 655361, -1, 65502, 655361, -1, 65500, 655361, -3, 65500, 1048577, -65535, 65500, 1048577, -65535, 65486, 655361, -65535, 65484, 655361)
+"cells": PackedInt32Array(-1, 0, 1, -1, 65534, 1, -1, 65532, 1, -2, 0, 1441792, -2, 65534, 1441792, -2, 65532, 1441792, -65536, 0, 1441792, -65536, 65534, 1441792, -65536, 65532, 1441792, -1, 65520, 1441793, -1, 65518, 1441793, -1, 65516, 1441793, -1, 65528, 1441793, -1, 65506, 655361, -1, 65504, 655361, -1, 65502, 655361, -1, 65500, 655361, -3, 65500, 1048577, -65535, 65500, 1048577, -65535, 65486, 655361, -65535, 65484, 655361, -65535, 65482, 1)
 }
 metadata/_editor_floor_ = Vector3(0, -1, 0)
 
-[node name="InteractableCrate" parent="World" index="1" instance=ExtResource("6_272bh")]
+[node name="InteractableCrate" parent="World" parent_id_path=PackedInt32Array(267138266) index="1" unique_id=918168008 instance=ExtResource("6_272bh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1152538, -1.36269, -7.2719345)
 
-[node name="MovingPlatform" parent="World" index="2" instance=ExtResource("6_7mycd")]
+[node name="MovingPlatform" parent="World" parent_id_path=PackedInt32Array(267138266) index="2" unique_id=2118185034 instance=ExtResource("6_7mycd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5898457, -1, -21.55987)
 
-[node name="FallingPlatform" parent="World" index="3" instance=ExtResource("7_272bh")]
+[node name="FallingPlatform" parent="World" parent_id_path=PackedInt32Array(267138266) index="3" unique_id=422747655 instance=ExtResource("7_272bh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, -43)
 
-[node name="MovingPlatform2" parent="World" index="4" instance=ExtResource("6_7mycd")]
+[node name="MovingPlatform2" parent="World" parent_id_path=PackedInt32Array(267138266) index="4" unique_id=246224111 instance=ExtResource("6_7mycd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5898457, -1, -49.57171)
 
-[node name="MovingPlatform3" parent="World" index="5" instance=ExtResource("6_7mycd")]
+[node name="MovingPlatform3" parent="World" parent_id_path=PackedInt32Array(267138266) index="5" unique_id=996561773 instance=ExtResource("6_7mycd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4758806, -1, -75)
 offset = Vector3(0, 5, 0)
 
-[node name="MovingPlatform7" parent="World" index="6" instance=ExtResource("6_7mycd")]
+[node name="MovingPlatform7" parent="World" parent_id_path=PackedInt32Array(267138266) index="6" unique_id=58613652 instance=ExtResource("6_7mycd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.476, 4, -91)
 offset = Vector3(0, 0, -10)
 duration = 6.0
 
-[node name="MovingPlatform6" parent="World" index="7" instance=ExtResource("6_7mycd")]
+[node name="MovingPlatform6" parent="World" parent_id_path=PackedInt32Array(267138266) index="7" unique_id=516611819 instance=ExtResource("6_7mycd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.476, 9, -83)
 offset = Vector3(0, -5, 0)
 
-[node name="FallingPlatform2" parent="World" index="8" instance=ExtResource("7_272bh")]
+[node name="FallingPlatform2" parent="World" parent_id_path=PackedInt32Array(267138266) index="8" unique_id=494951181 instance=ExtResource("7_272bh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, -75)
 
-[node name="FallingPlatform4" parent="World" index="9" instance=ExtResource("7_272bh")]
+[node name="FallingPlatform4" parent="World" parent_id_path=PackedInt32Array(267138266) index="9" unique_id=1198510404 instance=ExtResource("7_272bh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, -83)
 
-[node name="FallingPlatform6" parent="World" index="10" instance=ExtResource("7_272bh")]
+[node name="FallingPlatform6" parent="World" parent_id_path=PackedInt32Array(267138266) index="10" unique_id=210261021 instance=ExtResource("7_272bh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, -91)

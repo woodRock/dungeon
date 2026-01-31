@@ -30,13 +30,25 @@ func show_ui(fruit_count: int):
 		.set_ease(Tween.EASE_OUT)
 	pop_tween.tween_property(title_label, "scale", Vector2(1.0, 1.0), 0.1)
 	
+	# Pause the game.
+	get_tree().paused = true
+	
+	# Enable mouse input on the victory menu.
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
-func _on_next_level_button_pressed() -> void:
+func _on_next_level_button_pressed() -> void:		
+	# Unpause the game for the next level.
+	get_tree().paused = false
+	
+	# Load the next level.
 	LevelManager.load_next_level()
 
 func _on_main_menu_button_pressed() -> void:
 	get_tree().change_scene_to_file(menu_scene_path)
 
 func _on_restart_button_pressed() -> void:
+	# Unpause the game for the current level.
+	get_tree().paused = false
+	
+	# Restart the level.
 	LevelManager.restart_level()
